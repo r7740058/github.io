@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8">
+	<title>モデリングからアニメーションまで</title>
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<div class="cp_cont"><!-- メニュー用 -->
+	<div class="cp_offcm01">
+		<input type="checkbox" id="cp_toggle01">
+		<label for="cp_toggle01">
+			<span>
+			</span>
+		</label>
+		<div class="cp_menu">
+			<ul><!-- メニュー項目 -->
+				<li><a href="#">ページ先頭</a></li>
+				<li><a href="#start">はじめに</a></li>
+				<li><a href="#modeling">モデリング</a></li>
+				<li><a href="#texture">テクスチャ</a></li>
+				<li><a href="#rigging">リギング</a></li>
+				<li><a href="#animation">アニメーション</a></li>
+				<li><a href="#last">最後に</a></li>
+				<li><a href="/Library.html">用語解説</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<body><!-- ここから本体 -->
+	<header id="header">
+		<div class="video-wrap">
+			<h1>モデリングからアニメーションまで</h1>
+			<video id="background-video" controls autoplay loop muted playsinline>
+				<source src="image/背景動画.mov">
+			</video>
+		</div>
+	</header>
+
+	<h2 id="start">はじめに</h2>
+	<div id="mainbody">
+		<br>
+		<p>このページでは、3Dモデルの制作からそれを利用したアニメーションの制作までの過程を扱っています。</p>
+		<p>最低限の過程を記した初心者向けの内容です。</p>
+		<p>無料ソフト「blender」ver.3.5.1を使用しています。</p>
+		<br>
+		<p>本ページでは以下のようなアニメーションを制作していただきます。</p>
+		<video id="video2" controls muted playsinline loop>
+			<source src="image/ひよこ完成形.mp4">
+		</video>
+		<p>このひよこの制作体験を通して、大まかな流れや方法を学べます。</p>
+		<p>制作方法は、モデリング/テクスチャ/リギング/アニメーションの４過程にわけ、それぞれ5分以下の動画で解説しています。</p>
+		<p>想定制作時間は１時間～３時間程度です。</p>
+		<br><br>
+		<p>このページの内容から発展すると、少しクオリティを上げて</p>
+		<video id="video2" controls muted playsinline loop>
+			<source src="image/にわとり.mp4">
+		</video>
+		<p>こうなったり</p>
+		<br>
+		<p>ページの背景に設定している、</p>
+		<video id="video2" controls muted playsinline loop>
+			<source src="image/り.mp4">
+		</video>
+		<p>このようなものを作れるようになります。</p>
+		<p>すべて殆ど同じ要領です。</p>
+		<br>
+
+		<h3>目次</h3>
+		<p>右上のメニューにも同様のリンクがあります。</p>
+		<div id="line">
+			<ol>
+				<li><a href="#">ページ先頭</a></li>
+				<li><a href="#start">はじめに</a></li>
+				<li><a href="#modeling">モデリング</a></li>
+				<li><a href="#texture">テクスチャ</a></li>
+				<li><a href="#rigging">リギング</a></li>
+				<li><a href="#animation">アニメーション</a></li>
+				<li><a href="#last">最後に</a></li>
+			</ol>
+		</div>
+		<br>
+
+		<h3>用語解説ページ</h3>
+		<p>わからない用語などはここで調べられます。</p>
+		<p>これも右上のメニューにもリンクがあります。</p>
+		<div id="line">
+			<ol>
+				<li><a href="/Library.html">用語解説</a></li>
+			</ol>
+		</div>
+		<p>3DCG関連の用語をできるだけ集め、簡単な説明文と部分一致の検索機能を追加しています。ご活用ください。</p>
+		<p>リンクを右クリック→新しいタブかウィンドウで開くと便利です。</p>
+		<br>
+
+		<h3>blenderの基本操作</h3>
+		<p>必要となる基本操作です。
+		<p>ショートカットなどは各項目で紹介します。</p>
+		<div id="line">
+			<p>・選択:左クリック</p>
+			<p>・複数選択: shiftを押しながら左クリック</p>
+			<p>・カメラの向き: マウスホイールを押しながらマウス移動</p>
+			<p>・カメラ移動: shiftとマウスホイールを押しながらマウス移動</p>
+			<p>・カメラの前進・後退: マウスホイール上下</p>
+		</div>
+		<br>
+
+		<h3>便利な設定</h3>
+		<p>お好みでどうぞ。
+		<p>画面左上のメニュー「編集」→「プリファレンス」→「視点の操作」にて変更できます。</p><br>
+		<p>・「選択部分を中心に回転」にチェック: 視点操作が楽になります
+		<p>・「透視投影」のチェックを外す: 真正面や真横からのモデリングの際に見た目が平面のように変わらないため、より直感的に操作できます。使い分けるとなおよいです</p>
+		<br>
+
+		<h3>注意事項</h3>
+		<p>
+			<font color="red" size=5><b>こまめに保存すること</b></font>
+		</p>
+		<p>画面左上「ファイル」→「保存」、もしくはctrl+Sで保存できます。</p>
+		<p>このページの内容では処理の重いことはしませんが、 3Dの操作自体が軽量とは言い難いので、PCの性能によっては偶にフリーズやソフトが落ちます。</p>
+		<p>失意に打ちひしがれたくなければこまめに保存してください。保存してください。</p>
+		<br>
+	</div>
+
+	<h2 id="modeling">モデリング</h2>
+	<div id="mainbody">
+		<br>
+		<p>3Dモデルを形作る作業です。</p>
+		<p>以下はモデリングの工程を動画にまとめたものです（音声はありません）</p><!-- 本文 -->
+		<video id="video1" controls muted playsinline>
+			<source src="image/ひよこモデリング.mp4">
+		</video>
+		<h3>今回主に使用するショートカット</h3><br>
+		<div id="line">
+			<p>W:　選択ツールの切り替え</p>
+			<p>E:　選択部分の押し出し</p>
+			<p>X:　削除メニューの表示</p>
+			<p>L:　構造的に独立した部品を選択</p>
+			<p>A:　すべてを選択</p>
+			<p>G:　選択部分の移動</p>
+			<p>S:　選択部分のサイズ変更</p>
+			<p>R:　選択部分の回転</p>
+			<p>V:　選択部分の切り裂き</p>
+			<p>ctrl+R:　ループカット</p>
+			<p>shift+D:　選択部分の複製</p>
+			<p>ctrl+Z:　一つ戻る</p>
+			<p>ctrl+Y:　やり直し</p>
+		</div>
+		<br>
+		<h3>注意点</h3><br>
+		<p>・Y軸を正面にしないと、あとでボーンを左右対象化する際にうまくいきません。
+		<p>・モディファイアは一度削除や適用すると、ctrl+Zでも元に戻りません。
+		<p>・オブジェクトモードで移動などをすると、オブジェクトごとの原点なども移動します。その必要があるとき以外は編集モードでトランスフォームしましょう。
+		</p>
+		<br><br>
+	</div>
+
+	<h2 id="texture">テクスチャ</h2>
+	<div id="mainbody"><br>
+		<p>マテリアルの設定やテクスチャを貼る作業です。</p>
+		<video id="video1" controls muted playsinline>
+			<source src="image/ひよこスキニング.mp4">
+		</video>
+		<h3>今回主に使用するショートカット</h3><br>
+		<div id="line">
+			<p>N:　ウィンドウ右横のメニューを表示/非表示する</p>
+			<p>A:　すべてを選択</p>
+			<p>（テクスチャペイント内で）S:　スポイト</p>
+			<p>ctrl+Z:　一つ戻る（テクスチャを描く際にもこれで戻れます）</p>
+			<p>ctrl+Y:　やり直し</p>
+		</div>
+		<br>
+		<h3>注意点</h3><br>
+		<p>・テクスチャ用の画像はblenderの保存を押しても保存されず、画面左上「画像」→「保存」から個別に保存する必要があります。
+		</p><br><br><br>
+	</div>
+
+	<h2 id="rigging">リギング</h2>
+	<div id="mainbody">
+		<br>
+		<p>モデルを動かすための仕組みを作る作業です。</p>
+		<video id="video1" controls muted playsinline>
+			<source src="image/ひよこリギング.mp4">
+		</video>
+		<h3>今回主に使用するショートカット</h3><br>
+		<div id="line">
+			<p>A:　すべてを選択</p>
+			<p>E:　選択部分の押し出し</p>
+			<p>ctrl+Z:　一つ戻る</p>
+			<p>ctrl+Y:　やり直し</p>
+		</div>
+		<br>
+
+		<h3>注意点</h3><br>
+		<p>・ペアレントの際に選択する順番を間違えると、親が変わりボーンで動かすことができない状態になります。必ずアーマチュア（骨格）を最後に選択してください。
+		<p>間違えた場合はまたすべて選択し、「右クリック」→「ペアレント」→「親子関係をクリア」でリセットしてからやり直してください。リセットせずにやり直すと「親がループしています」と表示され実行できません。
+		</p><br><br><br>
+	</div>
+
+	<h2 id="animation">アニメーション</h2>
+	<div id="mainbody"><br>
+		<p>作成したものを動かします。</p>
+		<video id="video1" controls muted playsinline>
+			<source src="image/ひよこアニメーション.mp4">
+		</video>
+		<h3>今回主に使用するショートカット</h3><br>
+		<div id="line">
+			<p>I:　フレームにキーをうつメニューを表示する</p>
+			<p>space:　アニメーションの再生/停止</p>
+			<p>G:　選択部分の移動</p>
+			<p>S:　選択部分のサイズ変更</p>
+			<p>R:　選択部分の回転</p>
+		</div>
+		<br>
+
+		<h3>注意点</h3><br>
+		<p>・ポーズなどを変更した後にキーを打たずにフレームを動かすと、ポーズがリセットされます。先にキーをうつフレームを選択してからポージングしてください。
+		<p>リセットされてしまったら一つ戻る（ctrl+Z）でリカバリーできます。
+		<p>フレームを間違えた場合、そのままキーを打った後にキーをマウスでドラッグして適切なフレームに移動するか、<br>
+			動かしたボーンを選択→右クリック→ポーズのコピー→フレームを移動→ポーズを貼り付け→キーをうつ<br>
+			で対処してください。
+		</p>
+		<br><br><br>
+	</div>
+
+	<h2 id="last">最後に</h2>
+	<div id="mainbody">
+		<h3>お疲れさまでした！</h3>
+		<p>よろしければ、以上の内容についてのアンケートにご協力お願いします。</p>
+		<br>
+		<iframe width="640px" height="480px"
+			src="https://forms.office.com/Pages/ResponsePage.aspx?id=qWO15txntkauWBaZ2Ig18vPWtjLT1cNDq2kGkI5xx_BUN1E3VEExS1ZVNzVRMzhUN1JFM01QVE9XQS4u&embed=true"
+			frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh"
+			allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+		<br><br><br>
+		<p>ありがとうございました！</p>
+		<p>あなたの創作活動に幸あれ:)</p>
+		<br><br><br><br>
+	</div>
+
+	<footer>
+		<p><small>&copy; 2023 3120025</small></p>
+	</footer>
+</body>
+
+</html>
