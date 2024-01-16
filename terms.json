@@ -45,7 +45,7 @@
     {"termName": "アーマチュア", "reading": "あーまちゅあ", "explanation": "骨格。スケルトン。ボーンの集合。"},
     {"termName": "ボーン", "reading": "ぼーん", "explanation": "骨。ジョイント。モデルを動かすための骨。"},
     {"termName": "エンベロープ", "reading": "えんべろーぷ", "explanation": "Blenderでは、アーマチュアとメッシュを関連付ける方法の1つ。 各ボーンの周囲に、各ボーンの関節ごとに大きさを決めた領域を設定し、その中の頂点がポージングなどの影響を受ける。"},
-    {"termName": "インバースキネマティクス", "reading": "いんばーすきねまてぃくす", "explanation": "IK(Inverse Kinematics)"},
+    {"termName": "インバースキネマティクス", "reading": "いんばーすきねまてぃくす", "explanation": "IK(Inverse Kinematics)逆運動学。関節の先端、末端のボーンを操作することでそれにつながるボーンも動かす技術。"},
     {"termName": "ポーズ", "reading": "ぽーず", "explanation": "姿勢や位置。"},
     {"termName": "ポーズモード", "reading": "ぽーずもーど", "explanation": "Blenderで、ボーンを操作し、ポーズを設定できるモード。"},
     {"termName": "オブジェクトモード", "reading": "おぶじぇくともーど", "explanation": "Blenderで、オブジェクトを操作するモード。"},
